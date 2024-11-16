@@ -1,100 +1,500 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en">
+
+  <!-- Preloader -->
+  <div id="preloader" class="preloader" data-delay="0" data-limit="3000">
+    <img src="images/logo.svg" class="emblem" alt="Emblem" hidden="hidden" />
+  </div>
+
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css" />
-
+    <!-- Display -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+    <!-- Identity -->
+    <title>Sportzbase - Best Class in Bangalore</title>
+    <meta name="description" content="A description - typically long one for the google metadata to read and understand about the site. This can include catchy words that advertises the football ground.">
+    <meta name="author" content="Pratheek Unni">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="css/vendor/preloader.min.css" />
+    <link rel="stylesheet" href="css/vendor/font-family.min.css" />
+    <link rel="stylesheet" href="css/vendor/font-awesome.min.css" />  
+    <link rel="stylesheet" href="css/vendor/menu-engine.min.css" />
+    <link rel="stylesheet" href="css/vendor/menu-grid.min.css" />
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/vendor/swiper.min.css" />
+    <link rel="stylesheet" href="css/vendor/dynamic-slider.min.css" />
+    <link rel="stylesheet" href="css/vendor/bricklayer.min.css" />
+    <link rel="stylesheet" href="css/vendor/lightbox.min.css" />
+    <link rel="stylesheet" href="css/vendor/aos.min.css" />
+  
     <!-- Main CSS -->
-    <link rel="stylesheet" href="main.css">
-
-    <!-- JQUERY CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/core.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  
   </head>
-  <body>
 
-    <a href="#" id="back-to-top" class="off">
-      <span class="icon-stack">
-        <i class="bi bi-caret-up-fill"></i>
-      </span>
+  <body class="shock-body">
 
-      <span class="btt-text">back to top</span>
-    </a>
-
-    <div class="full-screen-search-holder"></div>
-
-
-    <nav class="navbar navbar-expand-lg menu-area">
-      <div class="container-fluid tet-container">
-        <div class="logo-wrapper">
-          <a href="/">
-            <span class="logo-text">Sportzbase</span>
-          </a>
-        </div>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse navbar-nav-scroll" id="navbarSupportedContent" role="navigation" aria-label="Main Navigation">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <span class="item_text split-holder" style="position: relative; white-space:nowrap;">
-                  <span class="split-item-prim">Home</span>
-                  <span class="split-item-sec">Home</span>
-                </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <span class="item_text split-holder" style="position: relative; white-space:nowrap;">
-                  <span class="split-item-prim">Gallery</span>
-                  <span class="split-item-sec">Gallery</span>
-                </span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/">
-                <span class="item_text split-holder" style="position: relative; white-space:nowrap;">
-                  <span class="split-item-prim">Team</span>
-                  <span class="split-item-sec">Team</span>
-                </span>
-              </a>
-            </li>
-          </ul>
+    <!-- Popup Box : TODO: come up with something creative for popup-->
+    <div id="popup-box" class="popup-box d-none">
+      <div class="card parent">
+        <div class="card-body rounded-3 small-shadow text-center bg-color white">
+          <h3 class="title max-w-85 mx-auto text-style-11 black">
+            <span class="bg-color white">Do you like cookies? 🍪</span>
+            <span class="zzz over-text scheme-1 gray"></span>
+          </h3>
+          <p class="description">We use cookie technology to provide you with a better browsing experience. You accept our terms if you continue to use this site.</p>
+          <!-- Button -->
+          <div class="button-wrapper align-h-center">
+            <a href="#your-link" target="_blank" class="button simple">
+              <span class="button-text black black-hover">Read more</span>
+            </a>
+            <button id="popup-box-dismiss" class="button simple">
+              <span class="button-text black black-hover"><mark class="animated-underline accent">Accept terms</mark></span>
+              <i class="fa-solid fa-arrow-right button-icon black black-hover"></i>
+            </button>
+          </div>
         </div>
       </div>
-    </nav>
+    </div>
 
-    <div class="container-fluid tet-container">
-        <div class="section">
-          <div class="row">
-            <div class="col-12 py-5 text-center"> <!-- Added text-center to this div -->
-              <h1 class="xl-heading heading text-uppercase text-center p-0">coming <span class="stroke">soon</span></h1>
-                <div class="section"></div>
-              <a itemprop="url" href="/" class="btn btn-medium btn-outline-blue">
-                <span class="btn-overlay"></span>
-                <span class="btn-text">watch out for this space</span>
+    <!-- Header -->
+    <header id="header" class="shock-header">    
+      <!-- Navbar -->
+      <nav id="navbar" class="navbar navbar-menu-grid scheme-2">
+        <div class="container-fluid">
+          <!-- Brand -->
+          <a class="navbar-brand drop-shadow white" href="/">
+            <!-- <div class="site-title">Site Title</div> -->
+            <img src="images/logo.svg" alt="Sportzbase" class="logo main-logo" />
+            <img src="images/logo.svg" alt="Sportzbase" class="logo sticky-logo" />
+            <img src="images/logo.svg" alt="Sportzbase" class="logo mobile-logo" />
+            <span class="logo-after-text">Sportzbase</span>
+          </a>
+          <!-- Menu toggle -->
+          <div id="menu-toggle" class="menu-toggle is-inactive magnetic-effect scheme-1 primary">
+            <div class="menu-toggle-icon">
+              <div class="menu-toggle-container">
+                <span class="menu-toggle-line-top"></span>
+                <span class="menu-toggle-line-middle"></span>
+                <span class="menu-toggle-line-bottom"></span>
+              </div>
+            </div>
+            <div class="menu-toggle-circle">
+              <svg class="menu-toggle-menu-toggle-svg-circle">
+                <path class="menu-toggle-path-circle" fill="none" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
+              </svg>
+            </div>
+            <svg width="0" height="0">
+              <mask id="menu-toggle-mask">
+                <path class="path-mask" fill="none" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
+              </mask>
+            </svg>
+            <div class="menu-toggle-path">
+              <div class="path-animation">
+                <div class="path-rotation"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Menu grid -->
+          <nav id="menu-grid" class="menu-grid scheme-1 primary">
+            <div class="menu-grid-item item-1 shadow" data-direction="rl">
+              <div class="menu-grid-item-inner" data-bg-color="#1d1d20">
+                <!-- Label -->
+                <div class="menu-grid-label top">
+                  <span class="label-vertical">
+                    <span class="label-line gray"></span>
+                    <span class="label-text gray">SINCE YEAR</span>
+                  </span>
+                </div>
+                <!-- Label -->
+                <div class="menu-grid-label bottom">
+                  <span class="label-vertical">
+                    <span class="label-line gray"></span>
+                    <span class="label-text gray">SPORTZBASE</span>
+                  </span>
+                </div>
+                <!-- Main menu -->
+                <div class="menu-grid-main">
+                  <a href="#your-link" class="menu-grid-main-item menu-item">Home</a>
+                  <a href="#your-link" class="menu-grid-main-item menu-item">Team</a>
+                  <a href="#your-link" class="menu-grid-main-item menu-item">Gallery</a>
+                  <a href="#your-link" class="menu-grid-main-item menu-item">Contact</a>
+                </div> 
+              </div>
+            </div>
+          </nav>
+        </div>
+      </nav>   
+    </header>
+
+    <!-- Main -->
+    <main id="main" class="shock-main" data-bg-color="#161616">
+      <!-- Banner -->
+      <section class="shock-section has-overlay">
+        <div class="banner">
+          <div class="content-wrapper">
+            <!-- Intro -->
+            <div class="extended-intro max-w-75 mb-35">
+              <div class="wrapper">
+                <div class="left-column">
+                  <h1 class="title text-style-2 text-offset">
+                    <span class="text-1 filled primary-75" data-lax="inertia-top">Unleash the Potential</span>
+                    <span class="text-1 outline white">Unleash the Potential</span>
+                  </h1>
+                  <span class="text-2 text-style-4 fw-800 text-filled text-italic white">Play Like <mark class="animated-underline primary-75">a Pro</mark> .</span>
+                  <div class="description white-85 fw-400 text-italic">
+                    <p>To inspire future football stars, every detail matters — each kick, strategy, and skill is designed to connect players with their passion for the game.</p>
+                  </div>
+                </div>
+                <div class="right-column">
+                  <!-- Button -->
+                  <a href="#modal" class="button shadow rounded white primary-hover button-collision" data-bs-toggle="modal" data-bs-target="#modal">
+                    <span class="button-text black black-hover">Register Now 🔥</span>
+                    <i class="fa-solid fa-arrow-right button-icon black black-hover"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Image -->
+          <div class="image-wrapper">
+            <img src="images/jpg/football-home.jpg" class="image vh-75 fit-cover" alt="football-home.jpg" />
+          </div>
+          <!-- Overlay -->
+          <div class="overlay black-85"></div>
+        </div>
+      </section>
+
+      <!-- Scrolling text -->
+      <section class="shock-section">
+        <div class="scrolling-text has-image align-h-right">
+          <!-- Image -->
+          <div class="image-wrapper max-w-25 mb-5">
+            <img src="images/jpg/studds-falling.jpg" alt="Studds falling" class="image floating-item" />
+          </div>
+          <!-- Text -->
+          <div class="text-wrapper mix-blend-lighter">
+            <h2 class="text text-style-1 text-filled primary" data-lax="h-right">Ignite passion, Master the game</h2>
+            <h2 class="text text-style-8 text-italic gray" data-lax="h-left">We combine skill, dedication, and top facilities to elevate your football journey.</h2>
+          </div>    
+        </div>
+      </section>
+
+
+      <!-- Carousel -->
+      <section class="shock-section">
+        <div class="gallery swiper slider has-navigation scheme-4 primary" data-columns="3,2,1,1">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="images/jpg/b-28.jpg" class="item lightbox-link parent hover-grayscale">
+                <div class="text-wrapper text-center">
+                  <h3 class="title text-style-5 white">Football Ground Pics</h3>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/jpg/b-28.jpg" class="image vh-75 fit-cover" alt="This is an example description for this item." />
+                  <div class="overlay black-75"></div>
+                </div>
               </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="images/jpg/c-13.jpg" class="item lightbox-link parent hover-grayscale">
+                <div class="text-wrapper text-center">
+                  <h3 class="title text-style-5 white">Football Ground Pics</h3>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/jpg/c-13.jpg" class="image vh-75 fit-cover" alt="This is an example description for this item." />
+                  <div class="overlay black-75"></div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <!-- Video -->
+              <a href="https://vimeo.com/222990241" class="item lightbox-link parent hover-grayscale">
+                <i class="fa-solid fa-circle-play gallery-icon white floating-item"></i>
+                <div class="image-wrapper">
+                  <img src="images/jpg/c-14.jpg" class="image vh-75 fit-cover" alt="This is an example description for this item." />
+                  <div class="overlay black-75"></div>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="images/jpg/c-15.jpg" class="item lightbox-link parent hover-grayscale">
+                <div class="text-wrapper text-center">
+                  <h3 class="title text-style-5 white">Football Ground Pics</h3>
+                </div>
+                <div class="image-wrapper">
+                  <img src="images/jpg/c-15.jpg" class="image vh-75 fit-cover" alt="This is an example description for this item." />
+                  <div class="overlay black-75"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <!-- Card -->
+      <section class="shock-section pt-6 pb-6">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="card has-icon parent">
+                <div class="card-body">
+                  <i class="fa fa-globe card-icon primary"></i>
+                  <h3 class="title text-style-11 white">Premium Football Ground</h3>
+                  <p class="description gray">Experience the thrill on our professional-quality football ground, designed to enhance every game, practice, and event.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="800">
+              <div class="card has-icon parent">
+                <div class="card-body">
+                  <i class="fa fa-id-card card-icon primary"></i>
+                  <h3 class="title text-style-11 white">Expert Coaching Staff</h3>
+                  <p class="description gray">Train with our skilled coaches who bring years of experience and passion, guiding every player to reach their potential.</p>
+                </div>
+              </div>
+            </div><div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="1200">
+              <div class="card has-icon parent">
+                <div class="card-body">
+                  <i class="fa fa-users card-icon primary"></i>
+                  <h3 class="title text-style-11 white">Community and Team Spirit</h3>
+                  <p class="description gray">Join a vibrant community of players who share your love for the game. Build friendships, teamwork, and skills on and off the field.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Map -->
+      <section class="shock-section">
+        <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=sportsbaze&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://sprunkin.com/">Sprunki Incredibox</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+      </section>
+
+    </main>
+
+    <!-- Modal -->
+    <div id="modal" class="modal fade" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog max-w-50">
+        <div class="modal-content shadow" data-bg-color="#201f25">
+          <div class="modal-header">
+            <i class="fa-solid fa-xmark close-button white primary-hover" data-bs-dismiss="modal" aria-label="Close"></i>
+            <!-- Intro -->
+            <div class="basic-intro">
+              <h2 class="title text-style-5">
+                <span class="text-1 text-outline gray">You've made the</span>
+                <span class="text-2 text-italic white"><mark class="animated-underline primary">best decision</mark></span>
+                <span class="text-1 text-outline gray">🤘</span>
+              </h2>
+              <div class="description gray">
+                <p>Please fill in the form below and our team will get back to you. ⚽</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <!-- Form -->
+            <div class="form-area scheme-2 primary">
+              <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form-fields needs-validation ajax-form" novalidate="novalidate">
+  
+                <!-- Hidden Netlify field for bot detection -->
+                <input type="hidden" name="form-name" value="contact">
+                <p style="display:none;">
+                  <label>Don’t fill this out if you're human: <input name="bot-field"></label>
+                </p>
+                
+                <div class="form-row row">
+                  <div class="form-col form-floating col-12 col-md-6">
+                    <input type="text" name="name" id="InputFloatingName" class="form-control" placeholder="Name" required="required">
+                    <label for="InputFloatingName" class="form-label">Name</label>
+                    <div class="invalid-feedback">Please enter your name.</div>
+                    <div class="valid-feedback">Looks good.</div>
+                  </div>
+                  <div class="form-col form-floating col-12 col-md-6">
+                    <input type="email" name="email" id="InputFloatingEmail" class="form-control" placeholder="name@example.com" required="required">
+                    <label for="InputFloatingEmail" class="form-label">Email</label>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                    <div class="valid-feedback">Looks good.</div>
+                  </div>
+                </div>
+                
+                <div class="form-row row">
+                  <div class="form-col form-floating col-12 col-md-2">
+                    <input type="number" name="age" id="InputFloatingAge" class="form-control" placeholder="Age" required="required" min="5" max="100">
+                    <label for="InputFloatingAge" class="form-label">Age</label>
+                    <div class="invalid-feedback">Please enter a valid age between 5 and 100.</div>
+                    <div class="valid-feedback">Age looks good.</div>
+                  </div>
+                  <div class="form-col form-floating col-12 col-md-8">
+                    <input type="tel" name="phone" id="InputFloatingPhone" class="form-control" placeholder="Phone Number" required="required" pattern="^[0-9]{10}$">
+                    <label for="InputFloatingPhone" class="form-label">Phone Number</label>
+                    <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
+                    <div class="valid-feedback">Phone number looks good.</div>
+                  </div>
+                </div>
+              
+                <div class="form-row row">
+                  <div class="form-col col-12 col-md-8">
+                    <div class="form-check">
+                      <input type="radio" name="info" id="InputRadioChecked" class="form-check-input form-radio" checked="checked" required="required">
+                      <label class="form-label form-check-label" for="InputRadioChecked">
+                        I found this site by searching the internet.
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input type="radio" name="info" id="InputRadio" class="form-check-input form-radio" required="required">
+                      <label class="form-label form-check-label" for="InputRadio">
+                        A friend recommended this site to me.
+                      </label>
+                    </div>
+                  </div>
+              
+                  <div class="form-col col-12 col-md-4 align-h-right">
+                    <button type="submit" class="button double-edge transparent primary-hover">
+                      <span class="button-text white white-hover">Enroll!</span>
+                      <span class="overlay gray-50 magnetic-effect"></span>
+                    </button>
+                  </div>
+                </div>
+                
+                <input type="hidden" name="subject" value="Message sent through the contact form.">
+                <span class="form-alert success">Your message was sent successfully. Thanks.</span>
+                <span class="form-alert error">Sorry. We were unable to send your message.</span>
+              </form>
+              
             </div>
           </div>
         </div>
       </div>
+    </div>
 
+    <!-- Vertical Lines -->
+    <div class="vertical-lines diagonal scheme-2 primary">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 align-h-center">
+          <span class="line"></span>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 align-h-center">
+          <span class="line"></span>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 align-h-center">
+          <span class="line"></span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Scroll to Top -->
+    <div class="side-widget to-right invert-color mix-blend-difference">
+      <div class="item align-v-bottom">
+        <a href="#" class="link hover-up">
+          <span class="widget float-icon">
+            <i class="fa-solid fa-arrow-up-long icon"></i>
+          </span>
+        </a>
+      </div>
+    </div>
 
-    <!-- SCRIPTS -->
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <!-- Index JS -->
-    <script src="index.js"></script>
+    <!-- Footer -->
+    <footer id="footer" class="shock-footer scheme-1 primary" data-bg-color="#191919">
+      <div class="top-bar" data-bg-color="#161616">
+        <div class="footer-content focus-trigger">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-lg-5 align-h-right align-v-center order-2 order-lg-1">
+                <div class="footer-item text-center">
+                  <!-- Links list -->
+                  <ul class="nav-list list-unstyled">
+                    <li class="nav-item">
+                      <a href="tel:+19912345678" class="nav-link has-icon">
+                        <img class="image-icon" src="svg/call-sharp.svg" alt="Icon name" data-shock-icon="32" />  
+                        <span class="text fw-bold">+91 9535776467</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-12 col-lg-2 order-1 order-lg-2">
+                <div class="footer-item text-center">
+                  <!-- Brand -->
+                  <a href="/" class="footer-brand button-collision">
+                    <!-- <div class="site-title">Site Title</div> -->
+                    <img src="images/logo-white.svg" alt="Sportzbase" class="logo" />
+                    <span class="logo-after-text">SPORTZBASE</span>
+                  </a>
+                </div>
+              </div>
+              <div class="col-12 col-lg-5 align-h-left align-v-center order-3">
+                <div class="footer-item text-center">
+                  <!-- Icon list -->
+                  <div class="list-wrapper">
+                    <ul class="icon-h-list">
+                      <li class="item">
+                        <a href="#your-link" class="link gray primary-hover hover-rotate"><i class="icon fab fa-facebook-f"></i></a>
+                      </li>
+                      <li class="item">
+                        <a href="#your-link" class="link gray primary-hover hover-rotate"><i class="icon fab fa-whatsapp"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-bar" data-bg-color="#161616">
+        <div class="text">© 2024 - All rights reserved. The <a href="https://sportsbaze.in" class="link gray primary-hover"><u>Sportzbase</u></a> is developed and maintained by <a href="https://sportsbaze.in" class="link gray primary-hover"><u>Sportzbase Coding Group</u></a>.</div>
+      </div>
+    </footer>
+    
+    <!-- Cursor -->
+    <svg class="cursor-effect primary" width="220" height="220" viewBox="0 0 220 220">
+      <defs>
+        <filter id="cursor-effect-filter" x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox">
+          <feTurbulence type="fractalNoise" baseFrequency="0" numOctaves="1" result="warp"></feTurbulence>
+          <feOffset dx="-30" result="warpOffset"></feOffset>
+          <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="20" in="SourceGraphic" in2="warpOffset"></feDisplacementMap>
+        </filter>
+      </defs>
+      <circle class="cursor-effect-inner" cx="110" cy="110" r="20"></circle>
+    </svg>
+    
+    <!-- Google Maps API: https://developers.google.com/maps/get-started -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6s7QK-BWbYB_brkdZU-C1Ex_lwj8SBCw"></script>
+
+    <!-- Vendor JavaScript -->
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
+    <script src="js/vendor/preloader.min.js"></script>
+    <script src="js/vendor/inview.min.js"></script>
+    <script src="js/vendor/menu-engine.min.js"></script>
+    <script src="js/vendor/menu-grid.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/swiper.min.js"></script>
+    <script src="js/vendor/anime.min.js"></script>
+    <script src="js/vendor/dynamic-slider.min.js"></script>
+    <script src="js/vendor/shuffle.min.js"></script>
+    <script src="js/vendor/stickybits.min.js"></script>
+    <script src="js/vendor/bricklayer.min.js"></script>
+    <script src="js/vendor/lightbox.min.js"></script>
+    <script src="js/vendor/typed.min.js"></script>
+    <script src="js/vendor/progressbar.min.js"></script>
+    <script src="js/vendor/map-styles.min.js"></script>
+    <script src="js/vendor/magnetic-effect.min.js"></script>
+    <script src="js/vendor/gsap.min.js"></script>
+    <script src="js/vendor/aos.min.js"></script>
+    <script src="js/vendor/lax.min.js"></script>
+    <script src="js/vendor/cursor-effect.min.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+  
   </body>
 </html>
