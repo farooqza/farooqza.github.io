@@ -4,8 +4,7 @@
 
 Theme   : Shock
 Version : 1.0.0
-Author  : Codings
-Support : codings.dev
+Author  : Pratheek Unni
 
 ----------------------------------------------*/
 
@@ -25,27 +24,25 @@ Support : codings.dev
 /* #region Color */
 
 :root {
-
-	/* Primary */
-	--primary-color: #07beb8;
-	--primary-15-color: #07beb826;
-	--primary-25-color: #07beb840;
-	--primary-50-color: #07beb880;
-	--primary-75-color: #07beb8bf;
+	--primary-color: #C89122; /* Gold */
+	--primary-15-color: #C8912233; /* Transparent Gold (15%) */
+	--primary-25-color: #C8912240; /* Transparent Gold (25%) */
+	--primary-50-color: #C8912280; /* Transparent Gold (50%) */
+	--primary-75-color: #C89122BF; /* Transparent Gold (75%) */
 
 	/* Secondary */
-	--secondary-color: #6917d0;
-	--secondary-15-color: #6917d026;
-	--secondary-25-color: #6917d040;
-	--secondary-50-color: #6917d080;
-	--secondary-75-color: #6917d0bf;
+	--secondary-color: #1C1C1C; /* Black */
+	--secondary-15-color: #1C1C1C26; /* Transparent Black (15%) */
+	--secondary-25-color: #1C1C1C40; /* Transparent Black (25%) */
+	--secondary-50-color: #1C1C1C80; /* Transparent Black (50%) */
+	--secondary-75-color: #1C1C1CBF; /* Transparent Black (75%) */
 
 	/* Tertiary */
-	--tertiary-color: #ec4e00;
-	--tertiary-15-color: #ec4e0026;
-	--tertiary-25-color: #ec4e0040;
-	--tertiary-50-color: #ec4e0080;
-	--tertiary-75-color: #ec4e00bf;
+	--tertiary-color: #A6761D; /* Darker Gold */
+	--tertiary-15-color: #A6761D26;
+	--tertiary-25-color: #A6761D40;
+	--tertiary-50-color: #A6761D80;
+	--tertiary-75-color: #A6761DBF;
 
 	/* Auxiliary */
 	--accent-color: #fedc00;
